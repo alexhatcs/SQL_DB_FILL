@@ -13,3 +13,7 @@ db2 uses a zip code table that contains location information(city, state, countr
 
 ### Entity-Relation Diagram created in draw.io
 ![ER Diagram created in draw.io](updated_ERD.png)
+
+
+#### Link to final project document
+https://docs.google.com/document/d/1mQar-l0PMBd7Zdv9YIMMmnW-mBUc1GOgB36Pa3xKFwM/edit?usp=sharing
