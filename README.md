@@ -11,4 +11,5 @@ db1 uses some different ID tables to split off information from the original tab
 
 db2 uses a zip code table that contains location information(city, state, country) to add another layer of foreign keys that associates the zip codes with attendees, address, etc.
 
-
+### Entity-Relation Diagram created in draw.io
+![ER Diagram created in draw.io](updated_ERD.png)
