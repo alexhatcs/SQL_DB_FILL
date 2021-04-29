@@ -1,0 +1,19 @@
+.open d
+ATTACH DATABASE d1 AS d1;
+
+INSERT INTO d1.Event(event_id) SELECT event_id FROM Event;
+INSERT INTO d1.Event_info(event_id, event_name, event_date, host_telephone, host_id) SELECT event_id, event_name, event_date, host_telephone, host_id FROM Event;
+
+INSERT INTO d1.Venue(venue_id, event_id) SELECT venue_id, event_id FROM Venue;
+INSERT INTO d1.Venue_info(venue_id, zip_code, country, state, city, venue_address, venue_contact) SELECT venue_id, zip_code, country, state, city, venue_address, venue_contact FROM Venue;
+
+INSERT INTO d1.Author(author_id, venue_id) SELECT author_id, venue_id FROM Author;
+INSERT INTO d1.Author_info(author_id, author_name, author_company, author_address, zip_code, country, city, state) SELECT author_id, author_name, author_company, author_address, zip_code, country, city, state FROM Author;
+
+INSERT INTO d1.Paper(author_id, paper_id) SELECT author_id, paper_id FROM Paper;
+INSERT INTO d1.Paper_info(paper_id, paper_name, paper_title, paper_word_count, editor_id, editor_contact, zip_code) SELECT paper_id, paper_name, paper_title, paper_word_count, editor_id, editor_contact, zip_code FROM Paper;
+
+INSERT INTO d1.Reviewer(reviewer_id, paper_id) SELECT reviewer_id, paper_id FROM Reviewer;
+INSERT INTO d1.Reviewer_info(reviewer_id, reviewer_name, reviewer_contact, reviewer_address, zip_code, country, city, state) SELECT reviewer_id, reviewer_name, reviewer_contact, reviewer_address, zip_code, country, city, state FROM  Reviewer;
+
+INSERT INTO d1.Chair(reviewer_id, committee, responsibility, head, chair_name) SELECT reviewer_id, committee, responsibility, head, chair_name FROM Chair;
